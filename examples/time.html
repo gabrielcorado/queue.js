@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title></title>
+    <script type="text/javascript" src="../build/queue.js"></script>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+      // Queue
+      var timeQueue = new Queue({performer: 'sync'});
+
+      // Actions
+      timeQueue.add('firstAction', function(callback) {
+        setTimeout((function(){
+          return function() {
+            console.log('firstAction', new Date());
+            callback();
+          }
+        }).call(this), 5000);
+      } );
+
+      timeQueue.add('secondAction', function(callback) {
+        console.log('secondAction', new Date());
+        callback();
+      } );
+
+      // Actions
+      timeQueue.add('thirdAction', function(callback) {
+        setTimeout((function(){
+          return function() {
+            console.log('thirdAction', new Date());
+            callback();
+          }
+        }).call(this), 5000);
+      } );
+
+      timeQueue.add('fourthAction', function(callback) {
+        console.log('fourthAction', new Date());
+
+        callback(null, 'Last action');
+      } );
+
+      timeQueue.perform(function(err, results) {
+        console.log('OK', results);
+      });
+    </script>
+  </body>
+</html>
