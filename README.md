@@ -74,32 +74,15 @@ timeQueue.perform(function(err, msg){
 
 ## Checklist
 
-<input type="checkbox" disabled="disabled" checked="checked" />
-*~~Basic Queue~~*
-
-<input type="checkbox" disabled="disabled" checked="checked" />
-*~~QueueAction~~*
-
-<input type="checkbox" disabled="disabled" checked="checked" />
-*~~Sync and Async performers~~*
-
-<input type="checkbox" disabled="disabled" checked="checked" />
-*~~Custom performer~~*
-
-<input type="checkbox" disabled="disabled" />
-Async perform callback
-
-<input type="checkbox" disabled="disabled" />
-Better perform callback results
-
-<input type="checkbox" disabled="disabled" />
-More Examples
-
-<input type="checkbox" disabled="disabled" />
-Retries
-
-<input type="checkbox" disabled="disabled" />
-Queue action history
+* [x] *~~Basic Queue~~*
+* [x] *~~QueueAction~~*
+* [x] *~~Sync and Async performers~~*
+* [x] *~~Custom performer~~*
+* [ ] Async perform callback
+* [ ] Better perform callback results
+* [ ] More Examples
+* [ ] Retries
+* [ ] Queue action history
 
 ## API
 
