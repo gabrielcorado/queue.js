@@ -209,5 +209,5 @@ class Queue
     # Start the recursive
     recursivePerform 0, [  ]
 
-# Set the activejob
+# Set the queue
 window.Queue = Queue
